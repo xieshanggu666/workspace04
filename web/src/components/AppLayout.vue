@@ -25,7 +25,7 @@
     </header>
 
     <main class="content">
-      <router-view />
+      <slot />
     </main>
 
     <transition name="toast">
