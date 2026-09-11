@@ -1,0 +1,111 @@
+:root {
+  --bg: #0b1220;
+  --panel: #131c2e;
+  --panel-2: #1a2538;
+  --border: #25334d;
+  --text: #e6edf7;
+  --text-dim: #8da0bd;
+  --pv: #f5a623;
+  --battery: #36c2cf;
+  --charger: #b06ef7;
+  --building: #7d93b2;
+  --grid: #ff6b6b;
+  --green: #2ecc71;
+  --warning: #ffc02e;
+  --critical: #ff5252;
+  --peak: #ff7a7a;
+  --flat: #ffd166;
+  --valley: #5ed3a3;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  font-family: 'PingFang SC', 'Microsoft YaHei', 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 14px;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.btn {
+  border: 1px solid var(--border);
+  background: var(--panel-2);
+  color: var(--text);
+  border-radius: 6px;
+  padding: 6px 14px;
+  font-size: 13px;
+  transition: all 0.15s;
+}
+.btn:hover {
+  border-color: #3d527a;
+  background: #21304a;
+}
+.btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+.btn.primary {
+  background: linear-gradient(135deg, #2b7de9, #1f5fbd);
+  border-color: #2b7de9;
+}
+.btn.primary:hover {
+  background: linear-gradient(135deg, #3a8bf5, #2770d3);
+}
+.btn.danger {
+  border-color: #8a3232;
+  color: #ff9b9b;
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+input,
+select {
+  font-family: inherit;
+  background: var(--panel-2);
+  border: 1px solid var(--border);
+  color: var(--text);
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-size: 13px;
+  outline: none;
+}
+input:focus,
+select:focus {
+  border-color: #3d6bb3;
+}
+
+.tag {
+  display: inline-block;
+  padding: 1px 8px;
+  border-radius: 10px;
+  font-size: 11px;
+  line-height: 18px;
+}
+.tag.pv { background: rgba(245, 166, 35, 0.18); color: var(--pv); }
+.tag.battery { background: rgba(54, 194, 207, 0.18); color: var(--battery); }
+.tag.charger { background: rgba(176, 110, 247, 0.18); color: var(--charger); }
+.tag.building { background: rgba(125, 147, 178, 0.22); color: #a9bcd8; }
+.tag.manager { background: rgba(46, 204, 113, 0.15); color: var(--green); }
+.tag.planner { background: rgba(43, 125, 233, 0.18); color: #6ea8ff; }
+
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-thumb { background: #2a3a58; border-radius: 4px; }
+::-webkit-scrollbar-track { background: transparent; }

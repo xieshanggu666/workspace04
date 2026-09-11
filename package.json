@@ -1,0 +1,22 @@
+{
+  "name": "campus-microgrid",
+  "version": "1.0.0",
+  "private": true,
+  "description": "校园微电网推演沙盘 — 光伏 / 储能 / 充电桩 / 楼宇负载 调度仿真",
+  "workspaces": [
+    "server",
+    "web"
+  ],
+  "scripts": {
+    "install:all": "npm install",
+    "dev": "concurrently -n server,web -c blue,green \"npm:dev -w server\" \"npm:dev -w web\"",
+    "dev:server": "npm run dev -w server",
+    "dev:web": "npm run dev -w web",
+    "seed": "npm run seed -w server",
+    "build": "npm run build -w server && npm run build -w web",
+    "test": "npm run test -w server"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
